@@ -108,12 +108,107 @@
         <div class="container">
           <h2>Прайс</h2>
           <div class="pricing-grid">
-            <div class="price-item"><span>Индивидуальная консультация (60 мин)</span><strong>50–80к ₽</strong></div>
-            <div class="price-item"><span>Бизнес-коучинг (4 сессии)</span><strong>200–300к ₽</strong></div>
-            <div class="price-item"><span>Финансовый анализ</span><strong>от 280к ₽</strong></div>
-            <div class="price-item"><span>Анализ рынка</span><strong>от 350к ₽</strong></div>
-            <div class="price-item"><span>Стратегическая сессия</span><strong>от 400к ₽</strong></div>
-            <div class="price-item"><span>Сопровождение (месяц)</span><strong>от 600к ₽</strong></div>
+            <article
+              class="price-item"
+              data-price="80000"
+              data-target="80000"
+              data-title="Индивидуальная консультация"
+              data-description="Персональная сессия на 60 минут: разбор ситуации, приоритеты, конкретный план на ближайшие 30 дней."
+            >
+              <span class="price-icon" aria-hidden="true">📊</span>
+              <div class="price-main">
+                <h3>Индивидуальная консультация</h3>
+                <p>60 минут</p>
+              </div>
+              <strong>50–80к ₽</strong>
+              <span class="price-counter" aria-hidden="true">0 ₽</span>
+              <button class="price-cta" type="button">Выбрать</button>
+            </article>
+
+            <article
+              class="price-item"
+              data-price="300000"
+              data-target="300000"
+              data-title="Бизнес-коучинг (4 сессии)"
+              data-description="Цикл из 4 сессий с поддержкой между встречами: фокус, решения, контроль выполнения, корректировка стратегии."
+            >
+              <span class="price-icon" aria-hidden="true">💼</span>
+              <div class="price-main">
+                <h3>Бизнес-коучинг (4 сессии)</h3>
+                <p>+поддержка</p>
+              </div>
+              <strong>200–300к ₽</strong>
+              <span class="price-counter" aria-hidden="true">0 ₽</span>
+              <button class="price-cta" type="button">Выбрать</button>
+            </article>
+
+            <article
+              class="price-item"
+              data-price="280000"
+              data-target="280000"
+              data-title="Финансовый анализ"
+              data-description="Полный анализ финансовой модели: прибыль, расходы, cash-flow, точки роста. На выходе — отчёт и пошаговый план."
+            >
+              <span class="price-icon" aria-hidden="true">📈</span>
+              <div class="price-main">
+                <h3>Финансовый анализ</h3>
+                <p>отчёт+план</p>
+              </div>
+              <strong>280к ₽</strong>
+              <span class="price-counter" aria-hidden="true">0 ₽</span>
+              <button class="price-cta" type="button">Выбрать</button>
+            </article>
+
+            <article
+              class="price-item"
+              data-price="350000"
+              data-target="350000"
+              data-title="Анализ рынка"
+              data-description="Анализ конкурентов, ёмкости рынка и ниши с практическими рекомендациями по позиционированию."
+            >
+              <span class="price-icon" aria-hidden="true">🔎</span>
+              <div class="price-main">
+                <h3>Анализ рынка</h3>
+                <p>конкуренты+ниша</p>
+              </div>
+              <strong>350к ₽</strong>
+              <span class="price-counter" aria-hidden="true">0 ₽</span>
+              <button class="price-cta" type="button">Выбрать</button>
+            </article>
+
+            <article
+              class="price-item"
+              data-price="400000"
+              data-target="400000"
+              data-title="Стратегическая сессия"
+              data-description="Глубокая стратегическая работа на 3–4 часа: цели, метрики, ресурсы и дорожная карта внедрения."
+            >
+              <span class="price-icon" aria-hidden="true">🧭</span>
+              <div class="price-main">
+                <h3>Стратегическая сессия</h3>
+                <p>3-4 часа</p>
+              </div>
+              <strong>400к ₽</strong>
+              <span class="price-counter" aria-hidden="true">0 ₽</span>
+              <button class="price-cta" type="button">Выбрать</button>
+            </article>
+
+            <article
+              class="price-item"
+              data-price="600000"
+              data-target="600000"
+              data-title="Сопровождение"
+              data-description="Сопровождение в течение месяца: регулярные созвоны, ревью KPI, помощь в принятии управленческих решений."
+            >
+              <span class="price-icon" aria-hidden="true">🤝</span>
+              <div class="price-main">
+                <h3>Сопровождение</h3>
+                <p>месяц</p>
+              </div>
+              <strong>600к ₽</strong>
+              <span class="price-counter" aria-hidden="true">0 ₽</span>
+              <button class="price-cta" type="button">Выбрать</button>
+            </article>
           </div>
         </div>
       </section>
@@ -149,6 +244,17 @@
         <p class="copyright">© <span id="year"></span> Все права защищены.</p>
       </div>
     </footer>
+
+    <div class="price-modal" id="price-modal" aria-hidden="true">
+      <div class="price-modal__backdrop" data-close-modal></div>
+      <div class="price-modal__dialog" role="dialog" aria-modal="true" aria-labelledby="price-modal-title">
+        <button class="price-modal__close" type="button" aria-label="Закрыть" data-close-modal>✕</button>
+        <p class="price-modal__label">Услуга</p>
+        <h3 id="price-modal-title">Индивидуальная консультация</h3>
+        <p id="price-modal-description"></p>
+        <a class="btn" href="#contacts" data-close-modal>Связаться для записи</a>
+      </div>
+    </div>
 
     <script src="./js/script.js"></script>
   </body>
