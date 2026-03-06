@@ -1,6 +1,8 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, type FormEvent } from 'react';
 import { Button } from './ui/button';
 import { Input } from './ui/input';
+
+const GOOGLE_SHEETS_WEBHOOK_URL = import.meta.env.VITE_GOOGLE_SHEETS_WEBHOOK_URL;
 
 export function ConsultationSection() {
   const [timeLeft, setTimeLeft] = useState({
@@ -9,6 +11,11 @@ export function ConsultationSection() {
     minutes: 45,
     seconds: 30
   });
+
+  const [name, setName] = useState('');
+  const [phone, setPhone] = useState('');
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [statusMessage, setStatusMessage] = useState('');
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -28,6 +35,45 @@ export function ConsultationSection() {
 
     return () => clearInterval(timer);
   }, []);
+
+  const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    setStatusMessage('');
+
+    if (!GOOGLE_SHEETS_WEBHOOK_URL) {
+      setStatusMessage('Не настроен адрес для сохранения заявок. Добавьте VITE_GOOGLE_SHEETS_WEBHOOK_URL.');
+      return;
+    }
+
+    try {
+      setIsSubmitting(true);
+
+      const response = await fetch(GOOGLE_SHEETS_WEBHOOK_URL, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          name,
+          phone,
+          source: 'consultation-form',
+          createdAt: new Date().toISOString()
+        })
+      });
+
+      if (!response.ok) {
+        throw new Error(`Ошибка отправки: ${response.status}`);
+      }
+
+      setName('');
+      setPhone('');
+      setStatusMessage('Спасибо! Ваша заявка отправлена.');
+    } catch {
+      setStatusMessage('Не удалось отправить заявку. Попробуйте еще раз.');
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
 
   return (
     <section className="relative py-20 overflow-hidden">
@@ -61,20 +107,29 @@ export function ConsultationSection() {
           </div>
 
           <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 max-w-md mx-auto">
-            <div className="space-y-3">
+            <form className="space-y-3" onSubmit={handleSubmit}>
               <Input
+                value={name}
+                onChange={(event) => setName(event.target.value)}
                 placeholder="Ваше имя"
+                required
                 className="bg-white/20 border-white/30 text-white placeholder:text-white/60"
               />
               <Input
                 type="tel"
+                value={phone}
+                onChange={(event) => setPhone(event.target.value)}
                 placeholder="Телефон"
+                required
                 className="bg-white/20 border-white/30 text-white placeholder:text-white/60"
               />
-              <Button className="w-full bg-red-500 hover:bg-red-600">
-                Получить консультацию
+              <Button className="w-full bg-red-500 hover:bg-red-600" disabled={isSubmitting} type="submit">
+                {isSubmitting ? 'Отправка...' : 'Получить консультацию'}
               </Button>
-            </div>
+              {statusMessage ? (
+                <p className="text-sm text-white/90">{statusMessage}</p>
+              ) : null}
+            </form>
           </div>
         </div>
       </div>
