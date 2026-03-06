@@ -1,5 +1,4 @@
 import { Phone, Mail, Menu } from 'lucide-react';
-import { Button } from './ui/button';
 import { useState } from 'react';
 
 export function Header() {
@@ -13,21 +12,18 @@ export function Header() {
           <div className="flex items-center gap-6">
             <div className="flex items-center gap-2">
               <Phone className="w-4 h-4" />
-              <span>8 800 550 03 99</span>
+              <span>89887935052</span>
             </div>
             <div className="hidden md:flex items-center gap-2">
               <Mail className="w-4 h-4" />
-              <span>info@lawyer.ru</span>
+              <span>internal.auditorI@yandex.ru</span>
             </div>
           </div>
-          <Button size="sm" className="bg-red-500 hover:bg-red-600 hidden md:inline-flex">
-            Заказать звонок
-          </Button>
         </div>
 
         {/* Main navigation */}
         <div className="flex items-center justify-between py-4">
-          <div className="text-xl font-semibold">ЛОГОТИП</div>
+          <div className="text-xl font-semibold">ИП Чапанов Ислам</div>
           
           <nav className="hidden lg:flex items-center gap-6">
             <a href="#services" className="hover:text-red-500 transition-colors">О нас</a>
