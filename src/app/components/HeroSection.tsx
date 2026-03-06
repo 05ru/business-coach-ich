@@ -1,14 +1,13 @@
 import { ImageWithFallback } from './figma/ImageWithFallback';
 import { Button } from './ui/button';
 import { Input } from './ui/input';
-import businessCoachingBanner from '../../assets/business-coaching-banner.svg';
-
+import { businessCoachingBannerDataUri } from '../../assets/business-coaching-banner-data-uri';
 export function HeroSection() {
   return (
     <section className="relative h-[500px] md:h-[600px] overflow-hidden">
       <div className="absolute inset-0">
         <ImageWithFallback
-          src={businessCoachingBanner}
+          src={businessCoachingBannerDataUri}
           alt="Бизнес-аналитика и рост"
           className="w-full h-full object-cover"
         />
