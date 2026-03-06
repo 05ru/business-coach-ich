@@ -1,7 +1,6 @@
 import { ImageWithFallback } from './figma/ImageWithFallback';
 import { Button } from './ui/button';
 import { Input } from './ui/input';
-import { businessCoachingBannerDataUri } from '../../assets/business-coaching-banner-data-uri';
 export function HeroSection() {
   return (
     <section className="relative h-[500px] md:h-[600px] overflow-hidden">
@@ -14,13 +13,14 @@ export function HeroSection() {
         <div className="absolute inset-0 bg-black/50" />
       </div>
 
-      <div className="relative container mx-auto px-4 h-full flex items-center">
+      <div className="relative container mx-auto px-4 h-full flex items-center py-8 md:py-10">
         <div className="max-w-2xl text-white">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-            Юридическая справка
+            <span className="block">Бизнес-коуч | Экономический консультант</span>
+            <span className="block">Аналитик рынка</span>
           </h1>
           <p className="text-lg md:text-xl mb-8 opacity-90">
-            Профессиональная помощь в решении юридических вопросов
+            Помогаю предпринимателям и компаниям принимать взвешенные финансовые решения, находить точки роста и выстраивать устойчивую стратегию развития.
           </p>
 
           <div className="bg-white p-6 rounded-lg shadow-lg max-w-md">
