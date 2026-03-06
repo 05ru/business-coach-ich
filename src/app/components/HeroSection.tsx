@@ -1,7 +1,7 @@
 import { ImageWithFallback } from './figma/ImageWithFallback';
 import { Button } from './ui/button';
 import { Input } from './ui/input';
-
+import { businessCoachingBannerDataUri } from '../../assets/business-coaching-banner-data-uri';
 export function HeroSection() {
   return (
     <section className="relative h-[500px] md:h-[600px] overflow-hidden">
