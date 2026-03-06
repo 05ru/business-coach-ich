@@ -7,7 +7,7 @@ export function HeroSection() {
     <section className="relative h-[500px] md:h-[600px] overflow-hidden">
       <div className="absolute inset-0">
         <ImageWithFallback
-          src={businessCoachingBannerDataUri}
+          src="https://drive.google.com/file/d/1KV1nyzUEpByJuITtvTTmuGA8pNF2EyTt/view"
           alt="Бизнес-аналитика и рост"
           className="w-full h-full object-cover"
         />
