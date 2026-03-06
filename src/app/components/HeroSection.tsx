@@ -1,10 +1,10 @@
 import { ImageWithFallback } from './figma/ImageWithFallback';
 import { Button } from './ui/button';
 import { Input } from './ui/input';
-import { businessCoachingBannerDataUri } from '../../assets/business-coaching-banner-data-uri';
+
 export function HeroSection() {
   return (
-    <section className="relative h-[500px] md:h-[600px] overflow-hidden">
+    <section className="relative min-h-[560px] md:h-[600px] overflow-hidden">
       <div className="absolute inset-0">
         <ImageWithFallback
           src="https://i.ibb.co/V0bnsNFX/20260306-0512-simple-compose-01kk0entsmeansezh1p8zre1ns-1.png"
@@ -14,16 +14,18 @@ export function HeroSection() {
         <div className="absolute inset-0 bg-black/50" />
       </div>
 
-      <div className="relative container mx-auto px-4 h-full flex items-center">
+      <div className="relative container mx-auto px-4 h-full flex items-start md:items-center pt-10 pb-14 md:py-10">
         <div className="max-w-2xl text-white">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-            Юридическая справка
+          <h1 className="font-bold mb-6 leading-[1.1] text-[clamp(1.35rem,4vw,3.75rem)]">
+            Бизнес-коуч | Экономический консультант
+            <br />
+            Аналитик рынка
           </h1>
           <p className="text-lg md:text-xl mb-8 opacity-90">
-            Профессиональная помощь в решении юридических вопросов
+            Помогаю предпринимателям и компаниям принимать взвешенные финансовые решения, находить точки роста и выстраивать устойчивую стратегию развития.
           </p>
 
-          <div className="bg-white p-6 rounded-lg shadow-lg max-w-md">
+          <div className="bg-white p-6 rounded-lg shadow-lg max-w-md mb-2 md:mb-0">
             <h3 className="text-gray-900 text-lg font-semibold mb-4">
               Получите консультацию
             </h3>
