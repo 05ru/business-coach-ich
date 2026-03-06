@@ -317,18 +317,6 @@ ol {
   animation: ripple 0.6s ease-out;
 }
 
-#pricing.is-sticky {
-  position: sticky;
-  top: 0;
-  z-index: 10;
-  background: linear-gradient(180deg, rgba(9, 15, 29, 0.98) 0%, rgba(9, 15, 29, 0.92) 100%);
-  border-top: 1px solid rgba(0, 212, 170, 0.35);
-  border-bottom: 1px solid rgba(0, 212, 170, 0.35);
-}
-
-#pricing.is-sticky h2 {
-  color: var(--accent-pricing);
-}
 
 .price-modal {
   position: fixed;
