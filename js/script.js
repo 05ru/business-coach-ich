@@ -20,7 +20,6 @@ if (menuToggle && menu) {
   });
 }
 
-const pricingSection = document.getElementById('pricing');
 const priceItems = Array.from(document.querySelectorAll('.price-item'));
 const priceModal = document.getElementById('price-modal');
 const priceModalTitle = document.getElementById('price-modal-title');
@@ -95,17 +94,6 @@ if (priceItems.length > 0) {
       document.body.style.overflow = 'hidden';
     });
   });
-}
-
-if (pricingSection) {
-  const stickyObserver = new IntersectionObserver(
-    ([entry]) => {
-      pricingSection.classList.toggle('is-sticky', !entry.isIntersecting && entry.boundingClientRect.top < 0);
-    },
-    { threshold: 0.1 }
-  );
-
-  stickyObserver.observe(pricingSection);
 }
 
 closeModalElements.forEach((element) => {
