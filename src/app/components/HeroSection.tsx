@@ -1,7 +1,6 @@
 import { ImageWithFallback } from './figma/ImageWithFallback';
 import { Button } from './ui/button';
 import { Input } from './ui/input';
-
 export function HeroSection() {
   return (
     <section className="relative overflow-hidden">
@@ -13,7 +12,6 @@ export function HeroSection() {
         />
         <div className="absolute inset-0 bg-black/50" />
       </div>
-
       <div className="relative container mx-auto px-4 min-h-[620px] md:h-[600px] flex items-start md:items-center pt-10 pb-16 md:py-10">
         <div className="max-w-2xl text-white">
           <h1 className="font-bold mb-6 leading-[1.1] text-[clamp(1.15rem,4vw,3.75rem)]">
@@ -23,7 +21,6 @@ export function HeroSection() {
           <p className="text-lg md:text-xl mb-8 opacity-90">
             Помогаю предпринимателям и компаниям принимать взвешенные финансовые решения, находить точки роста и выстраивать устойчивую стратегию развития.
           </p>
-
           <div className="bg-white p-6 rounded-lg shadow-lg max-w-md mt-2 mb-4 md:mb-0">
             <h3 className="text-gray-900 text-lg font-semibold mb-4">
               Получите консультацию
