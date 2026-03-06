@@ -7,8 +7,8 @@ export function HeroSection() {
     <section className="relative h-[500px] md:h-[600px] overflow-hidden">
       <div className="absolute inset-0">
         <ImageWithFallback
-          src="https://images.unsplash.com/photo-1658249682487-882436e01650?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxsYXd5ZXIlMjBidXNpbmVzcyUyMHByb2Zlc3Npb25hbHxlbnwxfHx8fDE3NzI3NTcxNTF8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
-          alt="Lawyer professional"
+          src="https://drive.google.com/file/d/1KV1nyzUEpByJuITtvTTmuGA8pNF2EyTt/view"
+          alt="Бизнес-аналитика и рост"
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-black/50" />
