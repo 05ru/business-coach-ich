@@ -17,8 +17,8 @@ export default function App() {
       <ServicesSection />
       <PracticeSection />
       <ConsultationSection />
-      <HowIWorkSection />
       <ClientsSection />
+      <HowIWorkSection />
       <ReviewsSection />
       <ContactSection />
       <Footer />
