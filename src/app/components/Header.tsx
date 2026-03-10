@@ -28,7 +28,7 @@ export function Header() {
           <nav className="hidden lg:flex items-center gap-6">
             <a href="#services" className="hover:text-red-500 transition-colors">О нас</a>
             <a href="#practice" className="hover:text-red-500 transition-colors">Услуги</a>
-            <a href="#clients" className="hover:text-red-500 transition-colors">Клиенты</a>
+            <a href="#clients" className="hover:text-red-500 transition-colors">Прайс-лист</a>
             <a href="#reviews" className="hover:text-red-500 transition-colors">Отзывы</a>
             <a href="#contact" className="hover:text-red-500 transition-colors">Контакты</a>
           </nav>
@@ -46,7 +46,7 @@ export function Header() {
           <nav className="lg:hidden py-4 border-t flex flex-col gap-4">
             <a href="#services" className="hover:text-red-500 transition-colors">О нас</a>
             <a href="#practice" className="hover:text-red-500 transition-colors">Услуги</a>
-            <a href="#clients" className="hover:text-red-500 transition-colors">Клиенты</a>
+            <a href="#clients" className="hover:text-red-500 transition-colors">Прайс-лист</a>
             <a href="#reviews" className="hover:text-red-500 transition-colors">Отзывы</a>
             <a href="#contact" className="hover:text-red-500 transition-colors">Контакты</a>
           </nav>
