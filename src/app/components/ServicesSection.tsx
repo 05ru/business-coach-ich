@@ -6,7 +6,6 @@ const services = [
     title: 'Финансовом моделировании',
     description: 'Создание точных финансовых моделей для управленческих решений',
     image: 'https://images.weserv.nl/?url=images.unsplash.com/photo-1460925895917-afdab827c52f&output=jpg&w=1200&q=80',
-    icon: LineChart
   },
   {
     title: 'Анализе рынка и конкурентов',
