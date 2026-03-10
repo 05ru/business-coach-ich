@@ -5,37 +5,36 @@ const services = [
   {
     title: 'Финансовом моделировании',
     description: 'Создание точных финансовых моделей для управленческих решений',
-    image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080',
-    icon: LineChart
+    image: 'https://images.weserv.nl/?url=images.unsplash.com/photo-1460925895917-afdab827c52f&output=jpg&w=1200&q=80',
   },
   {
     title: 'Анализе рынка и конкурентов',
     description: 'Оценка ниши и конкурентной среды для усиления позиций бизнеса',
-    image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080',
+    image: 'https://images.weserv.nl/?url=images.unsplash.com/photo-1551288049-bebda4e38f71&output=jpg&w=1200&q=80',
     icon: BarChart3
   },
   {
     title: 'Разработке стратегии развития',
     description: 'Построение реалистичной стратегии роста с четкими этапами',
-    image: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080',
+    image: 'https://images.weserv.nl/?url=images.unsplash.com/photo-1454165804606-c3d57bc86b40&output=jpg&w=1200&q=80',
     icon: Target
   },
   {
     title: 'Повышении рентабельности бизнеса',
     description: 'Поиск точек роста маржинальности и повышение эффективности процессов',
-    image: 'https://images.unsplash.com/photo-1554224155-6726b3ff858f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080',
+    image: 'https://images.weserv.nl/?url=images.unsplash.com/photo-1554224155-6726b3ff858f&output=jpg&w=1200&q=80',
     icon: TrendingUp
   },
   {
     title: 'Оптимизации расходов',
     description: 'Снижение издержек без потери качества ключевых бизнес-процессов',
-    image: 'https://images.unsplash.com/photo-1554224154-26032ffc0d07?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080',
+    image: 'https://images.weserv.nl/?url=images.unsplash.com/photo-1554224154-26032ffc0d07&output=jpg&w=1200&q=80',
     icon: Wallet
   },
   {
     title: 'Запуске новых проектов',
     description: 'Подготовка и сопровождение запуска проектов от идеи до реализации',
-    image: 'https://images.unsplash.com/photo-1521791136064-7986c2920216?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080',
+    image: 'https://images.weserv.nl/?url=images.unsplash.com/photo-1521791136064-7986c2920216&output=jpg&w=1200&q=80',
     icon: Rocket
   }
 ];
