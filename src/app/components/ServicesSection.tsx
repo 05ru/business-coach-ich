@@ -9,37 +9,37 @@ import newProjectsImage from '../../assets/services/new-projects.jpg';
 
 const services = [
   {
-    title: 'Финансовом моделировании',
+    title: 'Финансовое моделирование',
     description: 'Создание точных финансовых моделей для управленческих решений',
     image: financialModelingImage,
     icon: LineChart,
   },
   {
-    title: 'Анализе рынка и конкурентов',
+    title: 'Анализ рынка и конкурентов',
     description: 'Оценка ниши и конкурентной среды для усиления позиций бизнеса',
     image: marketAnalysisImage,
     icon: BarChart3
   },
   {
-    title: 'Разработке стратегии развития',
+    title: 'Разработка стратегии развития',
     description: 'Построение реалистичной стратегии роста с четкими этапами',
     image: strategyDevelopmentImage,
     icon: Target
   },
   {
-    title: 'Повышении рентабельности бизнеса',
+    title: 'Повышение рентабельности бизнеса',
     description: 'Поиск точек роста маржинальности и повышение эффективности процессов',
     image: profitabilityImage,
     icon: TrendingUp
   },
   {
-    title: 'Оптимизации расходов',
+    title: 'Оптимизация расходов',
     description: 'Снижение издержек без потери качества ключевых бизнес-процессов',
     image: costOptimizationImage,
     icon: Wallet
   },
   {
-    title: 'Запуске новых проектов',
+    title: 'Запуск новых проектов',
     description: 'Подготовка и сопровождение запуска проектов от идеи до реализации',
     image: newProjectsImage,
     icon: Rocket
@@ -54,7 +54,7 @@ export function ServicesSection() {
           Обо мне
         </h2>
         <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
-          Я — практикующий экономист и бизнес-коуч с опытом работы в финансовом анализе, стратегическом планировании и сопровождении малого и среднего бизнеса. Специализируюсь на:
+          Я — практикующий экономист и бизнес-коуч с опытом работы в финансовом анализе, стратегическом планировании и сопровождении малого и среднего бизнеса. Моя специализация:
         </p>
 
         <div className="grid md:grid-cols-3 gap-6">
