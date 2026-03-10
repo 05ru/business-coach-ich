@@ -1,24 +1,42 @@
 import { ImageWithFallback } from './figma/ImageWithFallback';
-import { Scale, FileText, Users } from 'lucide-react';
+import { LineChart, BarChart3, Target, TrendingUp, Wallet, Rocket } from 'lucide-react';
 
 const services = [
   {
-    title: 'Гражданское право',
-    description: 'Защита ваших прав в гражданских спорах',
-    image: 'https://images.unsplash.com/photo-1767189138545-63a1c029cad3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxsYXclMjBvZmZpY2UlMjBkZXNrfGVufDF8fHx8MTc3Mjc1NzE1MXww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
-    icon: Scale
+    title: 'Финансовом моделировании',
+    description: 'Создание точных финансовых моделей для управленческих решений',
+    image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080',
+    icon: LineChart
   },
   {
-    title: 'Корпоративное право',
-    description: 'Юридическое сопровождение бизнеса',
-    image: 'https://images.unsplash.com/photo-1745847768380-2caeadbb3b71?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxoYW5kc2hha2UlMjBidXNpbmVzcyUyMGRlYWx8ZW58MXx8fHwxNzcyNzI2NjE3fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
-    icon: Users
+    title: 'Анализе рынка и конкурентов',
+    description: 'Оценка ниши и конкурентной среды для усиления позиций бизнеса',
+    image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080',
+    icon: BarChart3
   },
   {
-    title: 'Документы',
-    description: 'Составление и проверка договоров',
-    image: 'https://images.unsplash.com/photo-1763729805496-b5dbf7f00c79?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkb2N1bWVudCUyMHNpZ25pbmclMjBsZWdhbHxlbnwxfHx8fDE3NzI3NTcxNTJ8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
-    icon: FileText
+    title: 'Разработке стратегии развития',
+    description: 'Построение реалистичной стратегии роста с четкими этапами',
+    image: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080',
+    icon: Target
+  },
+  {
+    title: 'Повышении рентабельности бизнеса',
+    description: 'Поиск точек роста маржинальности и повышение эффективности процессов',
+    image: 'https://images.unsplash.com/photo-1554224155-6726b3ff858f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080',
+    icon: TrendingUp
+  },
+  {
+    title: 'Оптимизации расходов',
+    description: 'Снижение издержек без потери качества ключевых бизнес-процессов',
+    image: 'https://images.unsplash.com/photo-1554224154-26032ffc0d07?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080',
+    icon: Wallet
+  },
+  {
+    title: 'Запуске новых проектов',
+    description: 'Подготовка и сопровождение запуска проектов от идеи до реализации',
+    image: 'https://images.unsplash.com/photo-1521791136064-7986c2920216?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080',
+    icon: Rocket
   }
 ];
 
@@ -27,10 +45,10 @@ export function ServicesSection() {
     <section id="services" className="py-16 md:py-20 bg-gray-50">
       <div className="container mx-auto px-4">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
-          Представляем ваши интересы
+          Обо мне
         </h2>
         <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
-          Профессиональная юридическая помощь в различных сферах права
+          Я — практикующий экономист и бизнес-коуч с опытом работы в финансовом анализе, стратегическом планировании и сопровождении малого и среднего бизнеса. Специализируюсь на:
         </p>
 
         <div className="grid md:grid-cols-3 gap-6">
