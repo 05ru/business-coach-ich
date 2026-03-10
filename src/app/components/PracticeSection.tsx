@@ -1,13 +1,24 @@
+import {
+  BarChart3,
+  Briefcase,
+  Compass,
+  Handshake,
+  Lightbulb,
+  LineChart,
+  Target,
+  TrendingUp
+} from 'lucide-react';
+
 export function PracticeSection() {
-  const practices = [
-    'Гражданские споры',
-    'Семейное право',
-    'Трудовые споры',
-    'Корпоративное право',
-    'Защита прав потребителей',
-    'Административное право',
-    'Жилищные споры',
-    'Наследственное право'
+  const services = [
+    { title: 'Анализ рынка', icon: BarChart3 },
+    { title: 'Финансовый анализ бизнеса', icon: Briefcase },
+    { title: 'Стратегическая сессия', icon: Compass },
+    { title: 'Разработка бизнес-модели', icon: Lightbulb },
+    { title: 'Оптимизация процессов', icon: LineChart },
+    { title: 'Постановка целей и KPI', icon: Target },
+    { title: 'Масштабирование бизнеса', icon: TrendingUp },
+    { title: 'Сопровождение собственника', icon: Handshake }
   ];
 
   return (
@@ -15,28 +26,21 @@ export function PracticeSection() {
       <div className="container mx-auto px-4">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div>
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              Часть нашей частной практики
-            </h2>
-            <p className="text-gray-600 mb-6 leading-relaxed">
-              Мы специализируемся на широком спектре юридических услуг, 
-              обеспечивая профессиональную поддержку как для частных лиц, 
-              так и для корпоративных клиентов.
-            </p>
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">Мои услуги</h2>
             <p className="text-gray-600 leading-relaxed">
-              Наша команда опытных юристов готова помочь вам в решении 
-              самых сложных правовых вопросов, обеспечивая индивидуальный 
-              подход к каждому клиенту.
+              Моя цель — не просто дать рекомендации, а помочь внедрить решения, которые
+              увеличивают прибыль и управляемость бизнеса.
             </p>
           </div>
 
-          <div className="grid grid-cols-2 gap-4">
-            {practices.map((practice, index) => (
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            {services.map(({ title, icon: Icon }) => (
               <div
-                key={index}
-                className="bg-white p-4 rounded-lg shadow hover:shadow-md transition-shadow border border-gray-100"
+                key={title}
+                className="bg-white p-4 rounded-lg shadow hover:shadow-md transition-shadow border border-gray-100 flex items-center gap-3"
               >
-                <p className="text-sm font-medium">{practice}</p>
+                <Icon className="h-5 w-5 text-indigo-600 shrink-0" aria-hidden="true" />
+                <p className="text-sm font-medium">{title}</p>
               </div>
             ))}
           </div>
