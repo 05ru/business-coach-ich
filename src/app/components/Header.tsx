@@ -29,7 +29,6 @@ export function Header() {
             <a href="#services" className="hover:text-red-500 transition-colors">О нас</a>
             <a href="#practice" className="hover:text-red-500 transition-colors">Услуги</a>
             <a href="#clients" className="hover:text-red-500 transition-colors">Прайс-лист</a>
-            <a href="#reviews" className="hover:text-red-500 transition-colors">Отзывы</a>
           </nav>
 
           <button
@@ -46,7 +45,6 @@ export function Header() {
             <a href="#services" className="hover:text-red-500 transition-colors">О нас</a>
             <a href="#practice" className="hover:text-red-500 transition-colors">Услуги</a>
             <a href="#clients" className="hover:text-red-500 transition-colors">Прайс-лист</a>
-            <a href="#reviews" className="hover:text-red-500 transition-colors">Отзывы</a>
           </nav>
         )}
       </div>
