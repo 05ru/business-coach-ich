@@ -1,16 +1,33 @@
+import { FormEvent, useState } from 'react';
 import { ImageWithFallback } from './figma/ImageWithFallback';
 import { Button } from './ui/button';
 import { Input } from './ui/input';
+
 export function HeroSection() {
+  const [name, setName] = useState('');
+  const [phone, setPhone] = useState('');
+  const [isSent, setIsSent] = useState(false);
+
+  const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    setIsSent(true);
+    setName('');
+    setPhone('');
+
+    window.setTimeout(() => {
+      setIsSent(false);
+    }, 3000);
+  };
+
   return (
     <section className="relative overflow-hidden">
       <div className="absolute inset-0">
         <ImageWithFallback
-          src="https://i.ibb.co/V0bnsNFX/20260306-0512-simple-compose-01kk0entsmeansezh1p8zre1ns-1.png"
-          alt="Бизнес-аналитика и рост"
+          src="https://images.pexels.com/photos/7947663/pexels-photo-7947663.jpeg?auto=compress&cs=tinysrgb&w=1920"
+          alt="Консультант анализирует рыночные показатели"
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-black/50" />
+        <div className="absolute inset-0 bg-slate-950/55" />
       </div>
       <div className="relative container mx-auto px-4 min-h-[620px] md:h-[600px] flex items-start md:items-center pt-10 pb-16 md:py-10">
         <div className="max-w-2xl text-white">
@@ -25,20 +42,31 @@ export function HeroSection() {
             <h3 className="text-gray-900 text-lg font-semibold mb-4">
               Получите консультацию
             </h3>
-            <div className="space-y-3">
+            <form className="space-y-3" onSubmit={handleSubmit}>
               <Input
                 placeholder="Ваше имя"
                 className="bg-gray-50"
+                value={name}
+                onChange={(event) => setName(event.target.value)}
+                required
               />
               <Input
                 type="tel"
                 placeholder="Телефон"
                 className="bg-gray-50"
+                value={phone}
+                onChange={(event) => setPhone(event.target.value)}
+                required
               />
-              <Button className="w-full bg-red-500 hover:bg-red-600">
-                Отправить заявку
+              <Button type="submit" className="w-full bg-red-500 hover:bg-red-600">
+                {isSent ? 'Заявка отправлена' : 'Отправить заявку'}
               </Button>
-            </div>
+              {isSent && (
+                <p className="text-sm text-emerald-600">
+                  Спасибо! Заявка успешно отправлена
+                </p>
+              )}
+            </form>
           </div>
         </div>
       </div>
