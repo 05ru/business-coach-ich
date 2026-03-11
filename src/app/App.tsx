@@ -6,7 +6,6 @@ import { ConsultationSection } from './components/ConsultationSection';
 import { HowIWorkSection } from './components/HowIWorkSection';
 import { ClientsSection } from './components/ClientsSection';
 import { ReviewsSection } from './components/ReviewsSection';
-import { ContactSection } from './components/ContactSection';
 import { Footer } from './components/Footer';
 
 export default function App() {
@@ -20,7 +19,6 @@ export default function App() {
       <ClientsSection />
       <HowIWorkSection />
       <ReviewsSection />
-      <ContactSection />
       <Footer />
     </div>
   );
