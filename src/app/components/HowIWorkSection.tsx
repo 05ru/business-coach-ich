@@ -1,25 +1,30 @@
-import { Phone, FileSearch, Scale, CheckCircle } from 'lucide-react';
+import { MessageCircle, Target, FileSignature, BriefcaseBusiness, BarChart3 } from 'lucide-react';
 
 const steps = [
   {
-    icon: Phone,
+    icon: MessageCircle,
     title: 'Первичная консультация',
-    description: 'Связываетесь с нами и получаете бесплатную консультацию по вашему вопросу'
+    description: 'Знакомство и диагностика'
   },
   {
-    icon: FileSearch,
-    title: 'Анализ ситуации',
-    description: 'Детально изучаем ваше дело и разрабатываем стратегию решения'
+    icon: Target,
+    title: 'Определение целей',
+    description: 'Фиксируем приоритеты и согласуем ожидаемый результат'
   },
   {
-    icon: Scale,
-    title: 'Юридическое сопровождение',
-    description: 'Представляем ваши интересы на всех этапах разбирательства'
+    icon: FileSignature,
+    title: 'Подписание договора',
+    description: 'Оформляем условия сотрудничества и зону ответственности'
   },
   {
-    icon: CheckCircle,
-    title: 'Результат',
-    description: 'Добиваемся положительного решения вашего вопроса'
+    icon: BriefcaseBusiness,
+    title: 'Работа по выбранному формату',
+    description: 'Проводим сессии и внедряем решения по согласованному плану'
+  },
+  {
+    icon: BarChart3,
+    title: 'Контроль результатов',
+    description: 'Отслеживаем прогресс и корректируем дальнейшие шаги'
   }
 ];
 
@@ -28,13 +33,13 @@ export function HowIWorkSection() {
     <section className="py-16 md:py-20 bg-gray-50">
       <div className="container mx-auto px-4">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
-          Как я работаю?
+          Как проходит работа
         </h2>
         <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
-          Простой и прозрачный процесс работы с нашими клиентами
+          Простой и прозрачный процесс работы с клиентами
         </p>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-8">
           {steps.map((step, index) => {
             const Icon = step.icon;
             return (
