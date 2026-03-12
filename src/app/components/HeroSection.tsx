@@ -28,7 +28,7 @@ export function HeroSection() {
           alt="Консультант анализирует рыночные показатели"
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-slate-950/55" />
+        <div className="absolute inset-0 bg-slate-950/70" />
       </div>
       <div className="relative container mx-auto px-4 min-h-[620px] md:h-[600px] flex items-start md:items-center pt-10 pb-16 md:py-10">
         <div className="max-w-2xl text-white">
